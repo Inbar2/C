@@ -1,0 +1,62 @@
+# makefile periodic executor project
+
+TARGET_PROG= myExecutorProg
+TARGET= ExecutorTestsLib #Name of a file(e.g. executable or object files).
+TARGET_LIB= ExecutorLib
+#Program for compiling C programs.
+CC= gcc
+INC_PATH= ../includeGen
+LOGGER_PATH= ../projects/LoggerPro
+VECTOR_PATH= ../genericVector
+HEAP_PATH= ../genericHeap
+#add in class computer the flag -m32 to CFLAGS
+CFLAGS= -g -Wall -ansi -pedantic -m32 -D_BSD_SOURCE#Extra flags to give to the C compiler.
+CFLAGS2= -g -Wall -ansi -pedantic -m32 -D_BSD_SOURCE -fPIC
+CPPFLAGS=$(addprefix -I,$(INC_PATH))
+OBJS_LIB= vectorGenericFunc.o genHeapFunc.o Executor.o Task.o Timer.o zlog4c.o 
+OBJS= ExecutorTestsMain.o ExecutorTestsFunctions.o 
+
+.PHONY: all clean
+both: $(TARGET_LIB) $(TARGET) $(TARGET_PROG)
+
+$(TARGET_LIB): $(OBJS_LIB)
+	$(CC) $(CFLAGS) -o $(TARGET_LIB) -shared $(OBJS_LIB)
+
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) -shared $(OBJS)
+
+
+
+zlog4c.o: $(LOGGER_PATH)/zlog4c.c $(LOGGER_PATH)/zlog4c.h
+	$(CC) -c $(CFLAGS2) $(CPPFLAGS) -I$(LOGGER_PATH) $<
+
+Executor.o: Executor.c Executor.h Task.h Timer.h $(LOGGER_PATH)/zlog4c.h $(INC_PATH)/vectorGenericHead.h $(INC_PATH)/vectorGenericHead.h 
+	$(CC) -c $(CFLAGS2) $(CPPFLAGS) -I$(LOGGER_PATH) $<
+
+Task.o: Task.c Task.h Timer.h $(LOGGER_PATH)/zlog4c.h
+	$(CC) -c $(CFLAGS2) $(CPPFLAGS) -I$(LOGGER_PATH) $<
+
+Timer.o: Timer.c Timer.h  $(LOGGER_PATH)/zlog4c.h
+	$(CC) -c $(CFLAGS2) $(CPPFLAGS)  -I$(LOGGER_PATH) $<
+	
+vectorGenericFunc.o: $(VECTOR_PATH)/vectorGenericFunc.c $(INC_PATH)/vectorGenericHead.h
+	$(CC) -c $(CFLAGS2) $(CPPFLAGS) $<
+
+genHeapFunc.o: $(HEAP_PATH)/genHeapFunc.c $(INC_PATH)/genHeapHead.h $(INC_PATH)/vectorGenericHead.h
+	$(CC) -c $(CFLAGS2) $(CPPFLAGS) $<
+
+
+	
+ExecutorTestsMain.o: ExecutorTestsMain.c ExecutorTestsHead.h $(LOGGER_PATH)/zlog4c.h
+	$(CC) -c $(CFLAGS2) $(CPPFLAGS) -I$(LOGGER_PATH) $<
+	
+ExecutorTestsFunctions.o: ExecutorTestsFunctions.c ExecutorTestsHead.h $(LOGGER_PATH)/zlog4c.h
+	$(CC) -c $(CFLAGS2) $(CPPFLAGS) -I$(LOGGER_PATH) $<
+
+
+clean:
+	rm -f $(TARGET) $(TARGET_LIB)  $(OBJS) $(OBJS_LIB) #Command to remove a file.
+
+run:
+	./$(TARGET)

@@ -1,0 +1,32 @@
+__libc_start_main(0x5662689a, 1, 0xffda69e4, 0x56628110 <unfinished ...>
+malloc(16)                                          = 0x569e1160
+malloc(20)                                          = 0x569e1180
+malloc(24)                                          = 0x569e11a0
+malloc(12)                                          = 0x569e11c0
+malloc(16)                                          = 0x569e11d0
+puts("\n*****vector after append:")                 = 27
+printf("Items: ")                                   = 7
+printf("%p\n", 0x569e11d0)                          = 11
+malloc(4)                                           = 0x569e1600
+gettimeofday(0xffda6864, 0)                         = 0
+gettimeofday(0xffda6834, 0)                         = 0
+puts("Hi test A")                                   = 10
+gettimeofday(0xffda6824, 0)                         = 0
+puts("\n*****vector after append:")                 = 27
+printf("Items: ")                                   = 7
+printf("%p\n", 0x569e11d0)                          = 11
+gettimeofday(0xffda6834, 0)                         = 0
+puts("Hi test A")                                   = 10
+gettimeofday(0xffda6824, 0)                         = 0
+puts("\n*****vector after append:")                 = 27
+printf("Items: ")                                   = 7
+printf("%p\n", 0x569e11d0)                          = 11
+gettimeofday(0xffda6834, 0)                         = 0
+puts("Hi test A")                                   = 10
+free(0x569e11d0)                                    = <void>
+free(0x569e11c0)                                    = <void>
+free(0x569e11a0)                                    = <void>
+free(0x569e1180)                                    = <void>
+free(0x569e1160)                                    = <void>
+printf("\nTest name: %s \tResult: %s \tstat"..., "RunExecutor_Test1", "Passed", 0) = 57
++++ exited (status 0) +++

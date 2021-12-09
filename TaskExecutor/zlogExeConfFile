@@ -1,0 +1,2 @@
+Level = LOG_TRACE
+File = zlogLogExecutorFile.txt

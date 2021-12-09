@@ -1,0 +1,33 @@
+# makefile periodic executor project
+
+
+TARGET= myTests #Name of a file(e.g. executable or object files).
+#Program for compiling C programs.
+CC= gcc
+INC_PATH= ../includeGen
+LOGGER_PATH= ../projects/LoggerPro
+VECTOR_PATH= ../genericVector
+HEAP_PATH= ../genericHeap
+CFLAGS= -g -Wall -ansi -pedantic#Extra flags to give to the C compiler.
+CPPFLAGS=$(addprefix -I,$(INC_PATH))
+OBJS= ExecutorTestsMain.o ExecutorTestsFunctions.o 
+
+.PHONY: all clean
+
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) $(CFLAGS) -o $(TARGET) $^
+
+
+ExecutorTestsMain.o: ExecutorTestsMain.c ExecutorTestsHead.h Executor.h
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $<
+	
+ExecutorTestsFunctions.o: ExecutorTestsFunctions.c ExecutorTestsHead.h Executor.h
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $<
+
+
+clean:
+	rm -f $(TARGET) $(OBJS) #Command to remove a file.
+
+
+run:
+	./$(TARGET)
