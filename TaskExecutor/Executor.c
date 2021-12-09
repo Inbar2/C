@@ -64,7 +64,7 @@ void ExecutorDestroy(Executor** _exe)
 		return;
 	}
 	tempVector = Heap_Destroy(&(*_exe)->m_tasks);
-	/*Go over tasks and Ffree them as well */ /*TODO how to free tasks inside? 2 ways: in a loop over vector items and destroy each, or heap extract and for each destroy element*/
+	/*Go over tasks and Ffree them as well */ /*How to free tasks inside? 2 ways: in a loop over vector items and destroy each, or heap extract and for each destroy element*/
 	for(i=1; i<=(*_exe)->m_numOfTasks; i++) /*because my vector starts from 1*/
 	{
 		Vector_Remove(tempVector, (void**)&task);
