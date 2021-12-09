@@ -1,0 +1,21 @@
+# makefile LoggerProject
+
+TARGET= logger # Name of a file(e.g. executable or object files).
+CC= gcc # Program for compiling C programs.
+INCLUDES =
+CFLAGS= -g -Wall -ansi -pedantic # Extra flags to give to the C compiler.
+OBJS= zlog4c.o zlog4cMain.o
+
+$(TARGET): $(OBJS)
+	$(CC) -o $(TARGET) $(OBJS)
+
+zlog4c.o: zlog4c.c zlog4c.h
+	$(CC) $(CFLAGS) -c zlog4c.c
+	
+zlog4cMain.o: zlog4cMain.c zlog4c.h
+	$(CC) $(CFLAGS) -c zlog4cMain.c
+
+clean:
+	rm -f $(TARGET) $(OBJS) # Command to remove a file.
+
+
