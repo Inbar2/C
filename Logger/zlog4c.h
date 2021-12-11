@@ -1,8 +1,6 @@
 /*
 File: zlog4c.h
 Description: Header file for LOGGER.
-Created by: Inbar Barhum
-Last Update: 22.1.2019
 */
 
 
@@ -106,6 +104,3 @@ void PrintfLogToFile(char _mode, char* _levelName, char* _message, const char* _
 
 
 #endif /* zlog4c.h */
-
-
-
