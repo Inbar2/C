@@ -1,9 +1,6 @@
 /* 
  * File: heapGenTestHead.h
  * Signatures for Automation Tests for Periodic Task Executor project.
- *
- * Author: Inbar Barhum 
- * Date: 29.1.2019
  */ 
 
 #ifndef __HEAPGENTESTHEAD_H__
@@ -17,7 +14,6 @@
 
 #define TRUE 1
 #define FALSE 0
-
 
 
 int	LessComparatorFunc(const void* _left, const void* _right);
@@ -41,5 +37,3 @@ AutoTestResults Heap_InsertTest2(Heap_ResultCode* _status); /* insert severl nod
 AutoTestResults Heap_ForEachTest1(Heap_ResultCode* _status); /* print heap after build with foreach */
 
 #endif /* "heapGenTestHead.h" include */
-
-
