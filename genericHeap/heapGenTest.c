@@ -1,8 +1,6 @@
 /* 
  * File: heapGenFuncTests.c
  * Functions for Generic Heap module. Tests Automation.
- * Author: Inbar Barhum 
- * Date: 14.1.2019
  */ 
 
 #include <stdio.h>
@@ -176,7 +174,6 @@ AutoTestResults Heap_DestroyTest2(Heap_ResultCode* _status) /* heap destroy twic
 
 /*---------------------------------------------------------------------------------------------------------------*/	
 
-
 AutoTestResults Heap_InsertTest1(Heap_ResultCode* _status) /* insert node to heap */
 {
 	Vector* myVec;
@@ -269,6 +266,3 @@ int itemA;
 
 	return FAIL;
 }
-
-
-
