@@ -2,9 +2,6 @@
 	genHeapHead.h
 	Description: Create a Binary heap generic data type over a generic vector data type.
 	Signuatures for Generic Heap.
-	Author: Inbar Barhum
-	inbarba22@gmail.com
-	last update: 16.12019
 */
 
 #ifndef __GENHEAPHEAD_H__
@@ -104,5 +101,3 @@ void Heap_Sort(Vector* _vec, LessThanComparator _pfLess);
 
 
 #endif /*genHeapHead.h*/
-
-
