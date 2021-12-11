@@ -1,0 +1,60 @@
+read_set 	SETA, 1, 02, 3, 4,5	,6	,	7,		8,9,10,11,							        12,13,14   ,15,	-1
+				read_set SETA, 1, 02, 3, -1             A
+			read_set SETA, 1, 02, 3, -1	4
+read_set SETA, 1, 02, 3, -1  @
+read_set SETA, 1, 02, 3, -1 , 4 ,5
+read_set SETA, 1, 02, 3, -1, 9 ,	0
+read_set SETA, 1, 2, 3, 4, -1,
+read_set SETA, 1, 2, 3, -1 -1
+read_set SETA, -1, -1
+read_set SETA, -1-1
+		read_set SETA, a, 1, 2, 3, -1
+read_set SETA , 1, b, c, 3, 4, -1
+read_set SETA, 1, 2, 3A, 4, -1
+read_set SETA, 1, 2, 3+1, 4, -1
+	    read_set SETA, 1, 2, 3, 4.5, 5, -1
+    read_set SETA, 1 , 2 , 3 , 4 , a, 5, -1
+  read_set SETA, 1, 2, 3, -A, 5, -1
+read_set SETA, SETB, 1, 2, 3, -1
+ read_set SETA, 1, -2, 3, 4, 5, -1
+read_set SETA, 1, 2, 3, 5, 128, -1
+read__set SETA, 1, 2, 3, 4, -1
+1read_set SETA, 1, 2, 3, 4, -1
+Read_set SETA, 1, 2, 3, 4, -1
+read_set1 SETA, 1, 2, 3, 4, -1
+read_setSETA, 1, 2, 3, 4, -1
+read_sett SETB, 1, 2, 3, 4, -1
+read_set, SETD, 1, 2, 3, 4, -1
+read_set	, SETD, 1, 2, 3, 4, -1
+read_set , SETD, 1, 2, 3, 4, -1
+read_set SET1, 1, 2, 3, 4, -1
+read_set SE1T, 1, 2, 3, 4, -1
+read_set 1SET, 1, 2, 3, 4, -1
+read_set SETAA, 1, 2, 3, 4, -1
+read_set seta, 1, 2, 3, 4, -1
+read_set SETA, 1, 2, 3 4, -1
+read_set SETA, 1, 2, 3			4, -1
+read_set SETA, 1, 2, 3, 4 -1
+read_set SETA 1, 2, 3, 4, -1
+read_set SETB, ,1, 2, 3, 4, -1
+read_set SETA, 1, 2, 3, ,4, 5,
+read_set SETA, 1, 2, 3 ,,4, 5, -1
+read_set SETA, 1, 2, 3, 4,
+read_set SETA, 1, 2, 3, 4
+print_set	SETA  	,	
+print_set SETA,
+stop p
+stop,
+stop ,
+stop				-1
+STOP
+intersect_set SETA, ,SETB,SETC
+sub_set SETA,SETB,,SETC
+symdiff_set SETA, SETB, SETC ,
+union_set SETA SETB SETC
+union_set SETA
+union_set SETA,
+union_set SETA, SETB
+union_set SETA, SETB,
+union_set ,SETA,SETB, SETC
+union_set ,SETA,SETB, SETC, SETD
