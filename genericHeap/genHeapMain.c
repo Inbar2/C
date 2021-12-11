@@ -1,8 +1,6 @@
 /* 
  * File: genHeapMain.c
  * Main for Generic Heap module.
- * Author: Inbar Barhum 
- * Date: 16.1.2019
  */ 
 
 
