@@ -4,10 +4,10 @@
 TARGET= ExecutorTests #Name of a file(e.g. executable or object files).
 #Program for compiling C programs.
 CC= gcc
-INC_PATH= ../../DS/includeGen
-LOGGER_PATH= ../LoggerPro
-VECTOR_PATH= ../../DS/genericVector
-HEAP_PATH= ../../DS/genericHeap
+INC_PATH= ../includeGen
+LOGGER_PATH= ../Logger
+VECTOR_PATH= ../genericVector
+HEAP_PATH= ../genericHeap
 #add in class computer the flag -m32 to CFLAGS
 CFLAGS= -g -Wall -ansi -pedantic -m32 -D_BSD_SOURCE#Extra flags to give to the C compiler.
 CPPFLAGS=$(addprefix -I,$(INC_PATH))
@@ -35,8 +35,6 @@ vectorGenericFunc.o: $(VECTOR_PATH)/vectorGenericFunc.c $(INC_PATH)/vectorGeneri
 
 genHeapFunc.o: $(HEAP_PATH)/genHeapFunc.c $(INC_PATH)/genHeapHead.h $(INC_PATH)/vectorGenericHead.h
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) $<
-
-
 
 ExecutorTestsMain.o: ExecutorTestsMain.c ExecutorTestsHead.h $(LOGGER_PATH)/zlog4c.h
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) -I$(LOGGER_PATH) $<
