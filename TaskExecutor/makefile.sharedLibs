@@ -6,7 +6,7 @@ TARGET_LIB= ExecutorLib
 #Program for compiling C programs.
 CC= gcc
 INC_PATH= ../includeGen
-LOGGER_PATH= ../projects/LoggerPro
+LOGGER_PATH= ../Logger
 VECTOR_PATH= ../genericVector
 HEAP_PATH= ../genericHeap
 #add in class computer the flag -m32 to CFLAGS
