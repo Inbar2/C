@@ -1,4 +1,4 @@
-# makefile for mmn 14 - final project
+# makefile for final project
 
 #Name of the executable file.
 TARGET= assembler
