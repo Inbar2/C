@@ -1,9 +1,6 @@
 /*
 	vectorGenericFunc.c
 	Functions for Generic vector.
-	Author: Inbar Barhum
-	inbarba22@gmail.com
-	last update: 16.12.2019
 */
 
 #include <stdlib.h>
