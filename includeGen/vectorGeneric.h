@@ -2,9 +2,6 @@
  * @brief Create a Generic Vector data type.
  * that stores pointer to user provided elements of generic type
  * The Vector is heap allocated and can grow and shrink on demand.
- * 
- * @author: Inbar Barhum
- * @lastUpdate: 10.1.2019
  */ 
 
 #ifndef __VECTORGENERICHEAD_H__
@@ -137,4 +134,3 @@ size_t Vector_ForEach(const Vector* _vector, VectorElementAction _action, void* 
 void VectorPrint(Vector const* _vector);
 
 #endif /* __vectorGenericHead_H__ */
-
