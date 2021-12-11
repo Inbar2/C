@@ -1,9 +1,6 @@
 /*
 	genHeapFunc.c
 	Functions for Generic Heap.
-	Author: Inbar Barhum
-	inbarba22@gmail.com
-	last update: 16.12019
 */
 
 #include <stdio.h>
@@ -113,11 +110,7 @@ Heap_ResultCode Heap_Insert(Heap* _heap, void* _element)
 		{
 			return HEAP_OVER_FLOW;
 		}
-	}
-	/*TODO REMOVE AFTER TESTS*/
-	printf("\n*****vector after append:\n");
-	VectorPrint(_heap->m_vec);
-	
+	}	
 	return HEAP_SUCCESS;
 }
 
@@ -356,7 +349,3 @@ static Heap_ResultCode Heapify(Heap* _heap, size_t _i)
 	}
 	return HEAP_HEAPIFY_SUCCESS;
 }
-
-
-
-
