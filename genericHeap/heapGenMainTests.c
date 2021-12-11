@@ -2,8 +2,6 @@
 /* 
  * File: heapGenMainTests.c
  * Main for Generic Heap module Tests Automation.
- * Author: Inbar Barhum 
- * Date: 16.1.2019
  */ 
 
 #include <stdio.h>
