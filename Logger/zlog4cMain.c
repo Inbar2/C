@@ -1,7 +1,6 @@
 /*
 File: zlog4cMain.c
 Description: Main file for LOGGER.
-Created by: Inbar Barhum
 Last Update: 22.1.2019
 */
 
@@ -30,9 +29,3 @@ int main()
 	
 	return 0;
 }
-
-
-
-
-
-
